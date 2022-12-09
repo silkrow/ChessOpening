@@ -7,15 +7,3 @@
     background-color: grey;
 }
 
-#chessboard .tile {
-    width: 80px;
-    height: 80px;
-}
-
-#chessboard .dark-tile {
-    background-color: darkslategrey;
-}
-
-#chessboard .light-tile {
-    background-color: lightgrey;
-}
