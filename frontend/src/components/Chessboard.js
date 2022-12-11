@@ -48,7 +48,17 @@ pieces.push({image:'./image/Chess_plt60.png', x:5, y:1});
 pieces.push({image:'./image/Chess_plt60.png', x:6, y:1});
 pieces.push({image:'./image/Chess_plt60.png', x:7, y:1});
 
+function grabPiece(e: React.MouseEvent) {
+    const element = e.target;
+    if (element.classList.contains('chess-piece')){
+        const x = e.clientX - 76/2;
+        const y = e.clientY - 76/2;
 
+        element.style.position = 'absolute';
+        element.style.left = `${x}px`;
+        element.style.top = `${y}px`;
+    }
+}
 
 export default function Chessboard() {
     let board = [];
@@ -64,8 +74,8 @@ export default function Chessboard() {
                 }
             })
 
-            board.push(<Tile piece_img={piece_img} number={index}/>);
+            board.push(<Tile key={`${i},${j}`} piece_img={piece_img} number={index}/>);
         }
     }
-    return <div id="chessboard">{board}</div>
+    return <div onMouseDown={e => grabPiece(e)} id="chessboard">{board}</div>
 }

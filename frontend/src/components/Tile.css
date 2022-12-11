@@ -5,6 +5,22 @@
     height: 80px;
 }
 
+.tile .chess-piece {
+    width: 76px;
+    height: 76px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 76px;
+}
+
+.tile .chess-piece:hover {
+    cursor: grab;
+}
+
+.tile .chess-piece:active {
+    cursor: grabbing;
+}
+
 .dark-tile {
     background-color: darkslategrey;
 }
@@ -14,5 +30,5 @@
 }
 
 .tile img {
-    width: 75px;
+    width: 76px;
 }
