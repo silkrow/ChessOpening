@@ -1,13 +1,18 @@
 import './Tile.css'
 
 interface Props {
-    number: Number
+    piece_img: string;
+    number: Number;
 }
 
-export default function Tile({number}: Props) {
+export default function Tile({piece_img, number}: Props) {
     if (number % 2 === 0) {
-        return <div className='dark-tile'></div>
+        return <div className='tile dark-tile'>
+            <img src={piece_img} />
+        </div>
     } else {
-        return <div className='light-tile'></div>
+        return <div className='tile light-tile'>
+            <img src={piece_img} />
+        </div>
     }
 }
