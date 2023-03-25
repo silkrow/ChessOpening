@@ -15,6 +15,7 @@ interface Piece {
 
 const pieces: Piece[] = [];
 
+// Initializing the board.
 pieces.push({image:'./image/Chess_rdt60.png', x:0, y:7});
 pieces.push({image:'./image/Chess_ndt60.png', x:1, y:7});
 pieces.push({image:'./image/Chess_bdt60.png', x:2, y:7});
